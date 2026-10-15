@@ -1,0 +1,5 @@
+{
+  "embedding_avg_ms": 442.77,
+  "embedding_p95_ms": 19.58,
+  "iterations": 10
+}

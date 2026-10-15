@@ -1,0 +1,7 @@
+{
+  "recall_at_5": 1.0,
+  "mrr": 1.0,
+  "ndcg_at_10": 1.0,
+  "avg_latency_ms": 1088.49,
+  "n_queries": 5
+}
