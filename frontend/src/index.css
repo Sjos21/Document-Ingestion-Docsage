@@ -1,26 +1,92 @@
+
 @import "tailwindcss";
 
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap");
+
 @theme {
-  --color-bg: #FAFAFA;
-  --color-fg: #0A0A0A;
-  --color-border: #E4E4E7;
-  --color-muted: #737373;
-  --color-accent: #4F46E5;
-  --font-sans: Inter, system-ui, sans-serif;
+  --color-bg: #080B14;
+  --color-fg: #F1F5F9;
+  --color-border: #20283B;
+  --color-muted: #94A3B8;
+  --color-accent: #7965FF;
+
+  --font-sans: "Inter", "DM Sans", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 }
 
-.dark {
-  --color-bg: #0A0A0A;
-  --color-fg: #FAFAFA;
-  --color-border: #262626;
-  --color-muted: #A3A3A3;
-  --color-accent: #818CF8;
+:root {
+  color-scheme: dark;
+  font-family: var(--font-sans);
+  background: #080B14;
+  color: #F1F5F9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
 }
 
 body {
-  background-color: var(--color-bg);
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(79, 70, 229, 0.09), transparent 48%),
+    #080B14;
   color: var(--color-fg);
-  font-family: var(--font-sans);
-  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+::selection {
+  color: #FFFFFF;
+  background: rgba(121, 101, 255, 0.45);
+}
+
+:focus-visible {
+  outline: 2px solid #9585FF;
+  outline-offset: 3px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #35405A transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #35405A;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
 }
